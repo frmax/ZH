@@ -1,0 +1,70 @@
+#Configurion file for PCB2GCode
+
+# --Input files--
+#front=ADCandDAC-F_Cu.gbr
+front=ADCandDAC-F_Mask.gbr
+back=ADCandDAC-B_Cu.gbr
+outline=ADCandDAC-Edge_Cuts.gbr
+drill=ADCandDAC-PTH.drl
+#preamble=preamble.ngc
+#preamble-text=preamble_text.txt
+#postamble=postamble.ngc
+
+output-dir=./output_cnc
+
+invert-gerbers=true #использовать для маски
+
+# --Common options--
+# use metric system - mm
+metric=true
+metricoutput=true
+mirror-absolute=true
+optimise=0.00005
+zchange=10.0000
+zero-start=true
+zsafe=5.0000
+
+# --Mill options--
+mill-feed=100#35
+mill-vertfeed=40
+mill-speed=10000
+#mill-feed-direction #направление фрезирования
+#offset=0.1000 # Вместо этого параметра использовать диаметр фрезы
+#offset=20  # Uncomment (and comment the previous line) for voronoi regions
+mill-diameters=0.12#,0.4# диаметр фрезв т.е. следа
+milling-overlap=40 % # перекрытие прохода
+isolation-width=1.4 # минимальная ширина изоляции
+zwork=-0.0050
+
+# --Drill options--
+drill-feed=20
+drill-side=auto
+drill-speed=10000
+milldrill-diameter=0.8
+min-milldrill-hole-diameter=0
+
+nog81=false
+onedrill=false
+zmilldrill=-1.5050
+zdrill=-1.5050
+
+# --Outline options--
+bridges=0.5000
+bridgesnum=2
+cut-feed=25
+cut-vertfeed=40
+cut-side=auto
+cut-infeed=0.2000
+cut-speed=10000
+cutter-diameter=1.5000
+fill-outline=true
+zbridges=-0.6000
+zcut=-1.5000
+
+# --Autoleveller options--
+al-back=false
+al-front=false
+al-probefeed=100
+al-x=15.0000
+al-y=15.0000
+software=LinuxCNC

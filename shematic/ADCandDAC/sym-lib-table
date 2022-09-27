@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "DAC8830")(type "Legacy")(uri "/home/freemax/KiCad/Z_Z/ADCandDAC/ADCandDAC/dac8830.lib")(options "")(descr ""))
+  (lib (name "ADCandDAC-rescue")(type "Legacy")(uri "${KIPRJMOD}/ADCandDAC-rescue.lib")(options "")(descr ""))
+)
